@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-400">
                 <i className="ri-mail-line mr-2"></i>
-                <span>contacto@flowdex.com</span>
+                <span>contacto@flowdexia.com</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <i className="ri-time-line mr-2"></i>
