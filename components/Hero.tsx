@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/351TU_NUMERO?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20automatización"
+              href="https://wa.me/+351937158208?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20de%20automatización"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-500 text-white text-lg font-semibold rounded-lg hover:bg-blue-600 transition-colors cursor-pointer whitespace-nowrap inline-block text-center"
