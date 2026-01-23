@@ -10,23 +10,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-<<<<<<< HEAD
               <div className="w-16 h-16 flex items-center justify-center rounded-lg">
                 <img src="/logo.png" className="ri-robot-line text-white text-xl"></img>
               </div>
-=======
-              <div className="w-8 h-8 flex items-center justify-center bg-blue-500 rounded-lg">
-                <i className="ri-robot-line text-white text-xl"></i>
-              </div>
-              <span className="text-2xl font-bold text-white font-pacifico">FlowdeX</span>
->>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
             </div>
             <p className="text-gray-400 mb-6">
               Transformando negocios a través de la automatización inteligente. 
               Soluciones personalizadas para empresas de todos los tamaños.
             </p>
             <div className="flex space-x-4">
-<<<<<<< HEAD
               <Link href="https://wa.me/+351937158208" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
                 <i className="ri-whatsapp-fill text-white"></i>
               </Link>
@@ -38,19 +30,6 @@ export default function Footer() {
               </Link>
               <Link href="mailto:contacto@flowdexia.com" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
                 <i className="ri-mail-fill text-white"></i>
-=======
-              <Link href="#" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
-                <i className="ri-facebook-fill text-white"></i>
-              </Link>
-              <Link href="#" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
-                <i className="ri-twitter-fill text-white"></i>
-              </Link>
-              <Link href="#" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
-                <i className="ri-linkedin-fill text-white"></i>
-              </Link>
-              <Link href="#" className="w-10 h-10 flex items-center justify-center bg-slate-800 rounded-lg hover:bg-blue-500 transition-colors cursor-pointer">
-                <i className="ri-instagram-fill text-white"></i>
->>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
               </Link>
             </div>
           </div>
@@ -79,7 +58,6 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-bold text-white mb-6">Contacto</h3>
-<<<<<<< HEAD
             <div className="space-y-3">              
               <div className="flex items-center text-gray-400">
                 <i className="ri-phone-line mr-2"></i>
@@ -88,20 +66,6 @@ export default function Footer() {
               <div className="flex items-center text-gray-400">
                 <i className="ri-mail-line mr-2"></i>
                 <span>contacto@flowdexia.com</span>
-=======
-            <div className="space-y-3">
-              <div className="flex items-center text-gray-400">
-                <i className="ri-map-pin-line mr-2"></i>
-                <span>Av. Tecnológica 1234, CDMX</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <i className="ri-phone-line mr-2"></i>
-                <span>+52 55 1234 5678</span>
-              </div>
-              <div className="flex items-center text-gray-400">
-                <i className="ri-mail-line mr-2"></i>
-                <span>contacto@flowdex.com</span>
->>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
               </div>
               <div className="flex items-center text-gray-400">
                 <i className="ri-time-line mr-2"></i>

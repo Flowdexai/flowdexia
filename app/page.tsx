@@ -5,11 +5,6 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import About from '../components/About';
-<<<<<<< HEAD
-
-=======
-import Testimonials from '../components/Testimonials';
->>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -20,11 +15,6 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-<<<<<<< HEAD
-
-=======
-      <Testimonials />
->>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
       <Contact />
       <Footer />
     </div>
