@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@react-google-maps/api": "^2.19.3",
+<<<<<<< HEAD
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "next": "15.3.2",
@@ -16,6 +17,12 @@
     "react-dom": "^19.0.0",
     "recharts": "^3.0.2",
     "tailwind-merge": "^3.4.0"
+=======
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^3.0.2"
+>>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

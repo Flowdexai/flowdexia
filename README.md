@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # flowdexia
 Web oficial de FlowdeX
 =======
+=======
+>>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -32,4 +35,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<<<<<<< HEAD
 >>>>>>> 1561853 (subiendo proyecto react)
+=======
+>>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285

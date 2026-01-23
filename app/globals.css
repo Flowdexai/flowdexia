@@ -2,9 +2,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
     @apply font-raleway;
   }
 }
+=======
+>>>>>>> 15618532eb7e866ae6ad5e8a889affbc87a59285
