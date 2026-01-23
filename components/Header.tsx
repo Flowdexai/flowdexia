@@ -37,12 +37,7 @@ export default function Header() {
             >
               Nosotros
             </button>
-            <button
-              onClick={() => document.getElementById('testimonios')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-white hover:text-blue-400 transition-colors cursor-pointer"
-            >
-              Testimonios
-            </button>
+
             <button
               onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
               className="text-white hover:text-blue-400 transition-colors cursor-pointer"
@@ -108,9 +103,7 @@ export default function Header() {
               <Link href="#nosotros" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
                 Nosotros
               </Link>
-              <Link href="#testimonios" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
-                Testimonios
-              </Link>
+
               <Link href="#contacto" className="text-white hover:text-blue-400 transition-colors cursor-pointer">
                 Contacto
               </Link>

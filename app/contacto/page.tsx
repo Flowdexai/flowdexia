@@ -16,7 +16,7 @@ export default function LeadsForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState('');
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -42,7 +42,7 @@ export default function LeadsForm() {
             });
 
             if (response.ok) {
-                setSubmitStatus('¡Mensaje enviado exitosamente! Recibirás un email con la propuesta de agenda en breve.');
+                setSubmitStatus('¡Mensaje enviado exitosamente! Recibirás un email de bienvenida en breve.');
                 setFormData({
                     nombre: '',
                     email: '',
@@ -67,21 +67,20 @@ export default function LeadsForm() {
             <div className="container mx-auto px-6">
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                        Agenda tu Consulta Gratuita
+                        Cuéntanos como podemos ayudarte?
                     </h2>
                     <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                        Completa el formulario y te contactaremos con una propuesta personalizada
-                        para agendar una llamada y discutir cómo podemos ayudarte.
+                        Completá el formulario y te contactaremos para asesorarte.
                     </p>
                 </div>
 
                 <div className="max-w-3xl mx-auto">
                     <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-blue-500/20">
-                        <h3 className="text-2xl font-bold text-white mb-6">Solicita tu Consulta</h3>
+                        <h3 className="text-2xl font-bold text-white mb-6">Contáctanos</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-white mb-2">Nombre *</label>
+                                    <label className="block text-white mb-2">Nombre y Apellido *</label>
                                     <input
                                         type="text"
                                         name="nombre"
@@ -108,16 +107,21 @@ export default function LeadsForm() {
 
                             <div>
                                 <label className="block text-white mb-2">
-                                    Empresa <span className="text-gray-400">(opcional)</span>
+                                    ¿En qué etapa estás actualmente? *
                                 </label>
-                                <input
-                                    type="text"
+                                <select
                                     name="empresa"
                                     value={formData.empresa}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none"
-                                    placeholder="Nombre de tu empresa"
-                                />
+                                    required
+                                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none cursor-pointer"
+                                >
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="emprendimiento">Tengo un emprendimiento</option>
+                                    <option value="negocio">Tengo un negocio</option>
+                                    <option value="empresa">Tengo una empresa / agencia</option>
+                                    <option value="aprender">Quiero aprender (todavía no vendo)</option>
+                                </select>
                             </div>
 
                             <div>
@@ -130,7 +134,7 @@ export default function LeadsForm() {
                                     maxLength={500}
                                     rows={5}
                                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:border-blue-500 focus:outline-none resize-none"
-                                    placeholder="Cuéntanos sobre tu proyecto y necesidades..."
+                                    placeholder="Cuéntanos sobre tu proyecto y/o necesidades..."
                                 />
                                 <p className="text-gray-400 text-sm mt-1">{formData.mensaje.length}/500 caracteres</p>
                             </div>

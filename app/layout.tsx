@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Pacifico } from "next/font/google";
+import { Geist, Geist_Mono, Pacifico, Raleway } from "next/font/google";
 import "./globals.css";
+import Chatbot from "../components/Chatbot";
 
 const pacifico = Pacifico({
   weight: '400',
@@ -8,6 +9,12 @@ const pacifico = Pacifico({
   display: 'swap',
   variable: '--font-pacifico',
 })
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--font-raleway',
+  display: 'swap',
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,9 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} ${raleway.variable} antialiased font-sans`}
       >
         {children}
+        <Chatbot />
       </body>
     </html>
   );
