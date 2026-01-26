@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function LeadsForm() {
     // URL de tu formulario n8n - REEMPLAZA ESTA URL
-    const N8N_FORM_URL = "https://n8n.srv1031825.hstgr.cloud/form/09952bca-6e39-4676-9edb-2d230f1944d6";
+    const N8N_FORM_URL = "https://n8n.flowdexia.cloud/form/09952bca-6e39-4676-9edb-2d230f1944d6";
 
     const [formData, setFormData] = useState({
         nombre: '',
