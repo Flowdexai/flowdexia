@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico, Raleway } from "next/font/google";
 import "./globals.css";
 import Chatbot from "../components/Chatbot";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const pacifico = Pacifico({
   weight: '400',
@@ -28,10 +29,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FlowdeX",
-  description: "FlowdeX",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  description: "FlowdeX"
 };
 
 export default function RootLayout({
@@ -44,6 +42,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} ${raleway.variable} antialiased font-sans`}
       >
+        <GoogleAnalytics gaId="G-370DVM1T5L" />
         {children}
         <Chatbot />
       </body>
