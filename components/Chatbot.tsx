@@ -18,16 +18,13 @@ export default function Chatbot() {
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    // TODO: Replace with actual N8N Webhook URL
-    const N8N_WEBHOOK_URL = 'https://n8n.srv1031825.hstgr.cloud/webhook/a44b8bf6-0572-44af-a9d5-86ee49a13a93/chat';
-
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.scrollY > 300) {
                 setIsVisible(true);
             } else {
                 setIsVisible(false);
-                setIsOpen(false); // Close chat if scrolled to top
+                setIsOpen(false);
             }
         };
 
@@ -70,16 +67,21 @@ export default function Chatbot() {
         setIsLoading(true);
 
         try {
-            const response = await fetch(N8N_WEBHOOK_URL, {
+            const response = await fetch('api/chat', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify({
                     message: input,
                     sessionId: sessionId
                 })
             });
 
-            if (!response.ok) throw new Error('Network response was not ok');
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error || 'Network response was not ok');
+            }
 
             const data = await response.json();
 
@@ -139,10 +141,11 @@ export default function Chatbot() {
                                 className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                             >
                                 <div
-                                    className={`max-w-[80%] p-3 rounded-2xl text-sm ${msg.role === 'user'
-                                        ? 'bg-blue-600 text-white rounded-tr-none'
-                                        : 'bg-slate-800 text-gray-200 border border-slate-700 rounded-tl-none'
-                                        }`}
+                                    className={`max-w-[80%] p-3 rounded-2xl text-sm ${
+                                        msg.role === 'user'
+                                            ? 'bg-blue-600 text-white rounded-tr-none'
+                                            : 'bg-slate-800 text-gray-200 border border-slate-700 rounded-tl-none'
+                                    }`}
                                 >
                                     {msg.content}
                                 </div>
@@ -190,10 +193,11 @@ export default function Chatbot() {
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`group flex items-center justify-center w-14 h-14 rounded-full shadow-lg shadow-blue-900/50 transition-all duration-300 hover:scale-110 ${isOpen
-                    ? 'bg-slate-800 text-white rotate-90'
-                    : 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:shadow-blue-500/50'
-                    }`}
+                className={`group flex items-center justify-center w-14 h-14 rounded-full shadow-lg shadow-blue-900/50 transition-all duration-300 hover:scale-110 ${
+                    isOpen
+                        ? 'bg-slate-800 text-white rotate-90'
+                        : 'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:shadow-blue-500/50'
+                }`}
             >
                 {isOpen ? (
                     <i className="ri-close-line text-2xl"></i>
