@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <div className="w-32 h-16 flex items-center justify-center">
-              <a href="https://flowdexia.com/"><img src="/public/logo.png" className="ri-robot-line text-white text-xl"></img></a>
+              <a href="https://flowdexia.com/"><img src="/logo.png" className="ri-robot-line text-white text-xl"></img></a>
             </div>
             {/* <a href="http://localhost:3000/"><span className="text-2xl font-bold text-sky-600 font-pacifico">Flow</span><span className="text-2xl font-bold text-white font-pacifico">deX</span></a> */}
           </div>

@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-16 h-16 flex items-center justify-center rounded-lg">
-                <img src="/public/logo.png" className="ri-robot-line text-white text-xl"></img>
+                <img src="/logo.png" className="ri-robot-line text-white text-xl"></img>
               </div>
             </div>
             <p className="text-gray-400 mb-6">
