@@ -15,7 +15,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-400 mb-6">
-              Transformando negocios a través de la automatización inteligente. 
+              Transformando negocios a través de la automatización inteligente.
               Soluciones personalizadas para empresas de todos los tamaños.
             </p>
             <div className="flex space-x-4">
@@ -58,7 +58,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-lg font-bold text-white mb-6">Contacto</h3>
-            <div className="space-y-3">              
+            <div className="space-y-3">
               <div className="flex items-center text-gray-400">
                 <i className="ri-phone-line mr-2"></i>
                 <span>+351 937 158 208</span>
@@ -80,13 +80,13 @@ export default function Footer() {
             © 2024 FlowdeX. Todos los derechos reservados.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+            <Link href="/politica-de-privacidad" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
               Política de Privacidad
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+            <Link href="/terminos-de-servicio" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
               Términos de Servicio
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
+            <Link href="/cookies" className="text-gray-400 hover:text-blue-400 transition-colors text-sm cursor-pointer">
               Cookies
             </Link>
           </div>
